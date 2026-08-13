@@ -1,0 +1,134 @@
+# ==============================
+#   AkelaAntiCheat Configuration
+#   Minecraft 1.16.5
+# ==============================
+
+# General settings
+general:
+  prefix: "&8[&cAkela&8] &r"
+  debug: false
+  # Language for messages (en, ru)
+  language: ru
+
+# Alert settings
+alerts:
+  # Broadcast alerts to all staff with akela.alerts permission
+  broadcast: true
+  # Log alerts to console
+  console: true
+  # Log alerts to file
+  log-file: true
+  # Log file path
+  log-path: "plugins/AkelaAntiCheat/logs/"
+
+# Punishment settings
+punishment:
+  # Actions on violations: WARN, KICK, BAN, COMMAND
+  # Thresholds: after how many violations to trigger action
+  warn-threshold: 5
+  kick-threshold: 15
+  ban-threshold: 30
+  # Command to run on ban (use %player% placeholder)
+  ban-command: "ban %player% [AkelaAC] Cheating"
+  # Reset violation count after X minutes
+  violation-reset: 10
+
+# ==============================
+#   MOVEMENT CHECKS
+# ==============================
+checks:
+  movement:
+    speed:
+      enabled: true
+      # Max allowed horizontal speed multiplier (vanilla = 1.0)
+      max-speed-multiplier: 1.25
+      # Violations before flagging
+      vl-threshold: 8
+      setback: true
+
+    flight:
+      enabled: true
+      # Max ticks allowed in air without jumping
+      max-air-ticks: 10
+      vl-threshold: 5
+      setback: true
+
+    no-fall:
+      enabled: true
+      vl-threshold: 3
+      # Give fall damage when detected
+      deal-damage: true
+
+    step:
+      enabled: true
+      # Max Y delta per tick (vanilla = 0.6 for step, 1.25 for jumping)
+      max-step-height: 0.65
+      vl-threshold: 5
+      setback: true
+
+    timer:
+      enabled: true
+      # Max packets per second (vanilla ~20)
+      max-packets-per-second: 22
+      vl-threshold: 5
+
+    ground-spoof:
+      enabled: true
+      vl-threshold: 5
+      setback: true
+
+  # ==============================
+  #   COMBAT CHECKS
+  # ==============================
+  combat:
+    kill-aura:
+      enabled: true
+      # Check for too many hits per second
+      max-hits-per-second: 8
+      # Check for hitting multiple entities in one tick
+      check-multi-target: true
+      vl-threshold: 5
+
+    reach:
+      enabled: true
+      # Max reach distance (vanilla = 3.0 survival, 4.5 creative)
+      max-reach: 3.2
+      vl-threshold: 3
+
+    auto-clicker:
+      enabled: true
+      # Max CPS allowed
+      max-cps: 20
+      vl-threshold: 5
+
+    anti-knockback:
+      enabled: true
+      # Min velocity change required after knockback
+      min-knockback-delta: 0.05
+      vl-threshold: 5
+
+  # ==============================
+  #   PLAYER CHECKS
+  # ==============================
+  player:
+    scaffold:
+      enabled: true
+      # Max blocks placed per second while moving
+      max-bps: 6
+      vl-threshold: 5
+
+    fast-place:
+      enabled: true
+      # Minimum ms between block placements
+      min-delay-ms: 50
+      vl-threshold: 6
+
+    fast-break:
+      enabled: true
+      # Multiplier over expected break time
+      break-time-multiplier: 0.8
+      vl-threshold: 5
+
+    bad-packets:
+      enabled: true
+      vl-threshold: 3

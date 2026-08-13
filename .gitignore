@@ -1,0 +1,59 @@
+# ===================================
+# Minecraft Paper Server - .gitignore
+# ===================================
+
+# Jar files (очень большие, не нужны в репо)
+*.jar
+*.zip
+*.tar.gz
+
+# Логи сервера
+logs/
+*.log
+*.log.gz
+
+# Миры (очень большие бинарные файлы)
+world/
+world_nether/
+world_the_end/
+worldeditregentempworld/
+
+# Кэш бумаги
+cache/
+
+# Временные данные LuckPerms
+plugins/LuckPerms/libs/
+plugins/LuckPerms/luckperms-h2-v2.mv.db
+plugins/LuckPerms/luckperms-h2-v2.trace.db
+
+# База данных AuthMe (содержит пароли игроков - не публиковать!)
+plugins/AuthMe/authe.db
+plugins/AuthMe/*.db
+plugins/AuthMe/data/
+plugins/AuthMe/LimboPlayers/
+plugins/AuthMe/backups/
+
+# Данные игроков EssentialsX
+plugins/Essentials/userdata/
+plugins/Essentials/mail.txt
+
+# WorldEdit история
+plugins/WorldEdit/sessions/
+plugins/WorldEdit/schematics/
+
+# WorldGuard данные регионов (если не нужны)
+# plugins/WorldGuard/worlds/
+
+# Банлисты и системные файлы
+banned-ips.json
+banned-players.json
+ops.json
+whitelist.json
+usercache.json
+version_history.json
+
+# Файл EULA
+eula.txt
+
+# Crash репорты
+crash-reports/
