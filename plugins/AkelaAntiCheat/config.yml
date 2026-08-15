@@ -77,6 +77,14 @@ checks:
       vl-threshold: 5
       setback: true
 
+    jesus:
+      enabled: true
+      vl-threshold: 5
+
+    no-slow:
+      enabled: true
+      vl-threshold: 5
+
   # ==============================
   #   COMBAT CHECKS
   # ==============================
@@ -105,6 +113,10 @@ checks:
       enabled: true
       # Min velocity change required after knockback
       min-knockback-delta: 0.05
+      vl-threshold: 5
+
+    rotation:
+      enabled: true
       vl-threshold: 5
 
   # ==============================

@@ -1,0 +1,4 @@
+First you are going to want to press the windows button on your keyboard and 'R' at the same time.
+Then type in %appdata% and go into your .minecraft folder
+after that you have to drag this folder into the 'saves' folder and then you restart your minecraft, go into singleplayer, and boom you have 
+your world. Enjoy! :)

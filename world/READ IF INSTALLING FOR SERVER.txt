@@ -1,0 +1,4 @@
+Download FileZilla
+Connect using your ftp credentials which you can find in your ftp file access
+Move this folder into filezilla and rename your world "Spawn" then go to your control panel and click "add world" and name it spawn.
+Then click save and enjoy :)

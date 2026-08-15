@@ -2,58 +2,40 @@
 # Minecraft Paper Server - .gitignore
 # ===================================
 
-# Jar files (очень большие, не нужны в репо)
-*.jar
-*.zip
-*.tar.gz
+# Основные серверные JAR (слишком большие для GitHub >50MB)
+paper.jar
+paper-*.jar
+
+# Кэш патчера Paper (>50MB каждый)
+cache/
 
 # Логи сервера
 logs/
 *.log
 *.log.gz
 
-# Миры (очень большие бинарные файлы)
-world/
-world_nether/
-world_the_end/
-worldeditregentempworld/
-
-# Кэш бумаги
-cache/
-
-# Временные данные LuckPerms
-plugins/LuckPerms/libs/
+# Временные данные LuckPerms (бинарная БД)
 plugins/LuckPerms/luckperms-h2-v2.mv.db
 plugins/LuckPerms/luckperms-h2-v2.trace.db
 
-# База данных AuthMe (содержит пароли игроков - не публиковать!)
-plugins/AuthMe/authe.db
+# База данных аккаунтов AuthMe (содержит пароли игроков!)
+plugins/AuthMe/authme.db
 plugins/AuthMe/*.db
 plugins/AuthMe/data/
 plugins/AuthMe/LimboPlayers/
 plugins/AuthMe/backups/
+plugins/AuthMe/GeoLite2-Country.mmdb
 
 # Данные игроков EssentialsX
 plugins/Essentials/userdata/
 plugins/Essentials/mail.txt
 
-# WorldEdit история
+# WorldEdit история операций
 plugins/WorldEdit/sessions/
-plugins/WorldEdit/schematics/
-
-# WorldGuard данные регионов (если не нужны)
-# plugins/WorldGuard/worlds/
-
-# Банлисты и системные файлы
-banned-ips.json
-banned-players.json
-ops.json
-whitelist.json
-usercache.json
-version_history.json
-
-# Файл EULA
-eula.txt
 
 # Crash репорты
 crash-reports/
+
+# Системные файлы Windows
+Thumbs.db
+desktop.ini
